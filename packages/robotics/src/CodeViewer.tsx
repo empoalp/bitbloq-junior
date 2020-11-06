@@ -1,8 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { useRecoilValue } from "recoil";
 import styled from "@emotion/styled";
 import { breakpoints, colors, Icon, useTranslate } from "@bitbloq/ui";
-import CodeEditor from "@bitbloq/ui/src/components/CodeEditor";
+import CodeEditor, {
+  useCodeEditor
+} from "@bitbloq/ui/src/components/CodeEditor";
 import {
   bloqsState,
   boardState,
@@ -35,23 +37,27 @@ const CodeViewer: FC<ICodeViewerProps> = ({ onClose }) => {
   const components = useRecoilValue(componentsState);
   const selectedBloq = useRecoilValue(selectedBloqState);
 
-  let code = board ? getCode(board.name, components, bloqs, selectedBloq) : "";
+  const { codeEditorPops, setValue, setSelection } = useCodeEditor({
+    value: "",
+    disableMinimap: true,
+    readOnly: true
+  });
 
-  let selectedRange;
-  if (selectedBloq) {
-    const startIndex = code.indexOf(selectedCodeStartToken);
-    code = code.replace(selectedCodeStartToken, "");
-    const endIndex = code.indexOf(selectedCodeEndToken);
-    code = code.replace(selectedCodeEndToken, "");
-    const [startLine, startColumn] = getPosition(code, startIndex);
-    const [endLine, endColumn] = getPosition(code, endIndex);
-    selectedRange = {
-      startLine,
-      startColumn,
-      endLine,
-      endColumn
-    };
-  }
+  useEffect(() => {
+    let code = board
+      ? getCode(board.name, components, bloqs, selectedBloq)
+      : "";
+    if (selectedBloq) {
+      const startIndex = code.indexOf(selectedCodeStartToken);
+      code = code.replace(selectedCodeStartToken, "");
+      const endIndex = code.indexOf(selectedCodeEndToken);
+      code = code.replace(selectedCodeEndToken, "");
+      setValue(code);
+      setSelection({ start: startIndex, end: endIndex });
+    } else {
+      setValue(code);
+    }
+  }, [board?.name, components, bloqs, selectedBloq]);
 
   return (
     <Container>
@@ -61,12 +67,7 @@ const CodeViewer: FC<ICodeViewerProps> = ({ onClose }) => {
           <Icon name="close" />
         </CloseIcon>
       </Header>
-      <CodeEditor
-        disableMinimap
-        readOnly
-        code={code}
-        selectedRange={selectedRange}
-      />
+      <CodeEditor {...codeEditorPops} />
     </Container>
   );
 };

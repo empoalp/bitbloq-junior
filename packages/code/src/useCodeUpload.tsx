@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Borndate from "@bitbloq/borndate";
-import Avrgirl from "avrgirl-arduino";
+import Avrgirl from "avrgirl-arduino/dist/avrgirl-arduino";
 import { knownBoards } from "./config";
 
 export enum UploadErrorType {
@@ -108,7 +108,7 @@ class Uploader {
     avrgirl.protocol.chip.verifyPage = (_a, _b, _c, _d, cb) => cb();
     avrgirl.protocol.chip.verify = (_a, _b, _c, _d, cb) => cb();
 
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       (avrgirl as Avrgirl).flash(enc.encode(hex), error =>
         error ? reject(error) : resolve()
       );
@@ -232,6 +232,8 @@ export const useCodeUpload = (
       if (e.type !== "board-not-found" && onUploadError) {
         onUploadError(e);
       }
+
+      console.log(e);
 
       throw e;
     } finally {

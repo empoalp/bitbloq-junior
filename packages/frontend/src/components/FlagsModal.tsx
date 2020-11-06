@@ -116,9 +116,11 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80px;
 
   svg {
-    height: 120px;
+    width: 80px;
+    height: 80px;
   }
 `;
 

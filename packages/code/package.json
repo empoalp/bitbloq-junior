@@ -13,7 +13,7 @@
     "avrgirl-arduino": "git+https://github.com/Bitbloq/avrgirl-arduino.git#feature/fix-browser-serial",
     "immutability-helper": "^3.0.1",
     "jszip": "^3.2.2",
-    "monaco-editor": "^0.18.1",
+    "monaco-editor": "0.21.2",
     "react": "^16.12.0",
     "uuid": "^7.0.1"
   },

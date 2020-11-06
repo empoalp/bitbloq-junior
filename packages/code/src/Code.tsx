@@ -11,7 +11,6 @@ import update from "immutability-helper";
 import styled from "@emotion/styled";
 import { css } from "@emotion/core";
 import { useTranslate, Button, Icon, Select } from "@bitbloq/ui";
-import Editor from "@bitbloq/ui/src/components/CodeEditor";
 import FileTree from "./FileTree";
 import NewFileModal from "./NewFileModal";
 import NewFolderModal from "./NewFolderModal";
@@ -26,6 +25,7 @@ import {
   ICodeContent
 } from "./index";
 import { knownBoards } from "./config";
+import Editor from "./Editor";
 
 export interface ICodeRef {
   addLibrary: (library: ILibrary) => void;
@@ -95,6 +95,15 @@ const Code: RefForwardingComponent<ICodeRef, ICodeProps> = (
   const [newFolderOpen, setNewFolderOpen] = useState(false);
 
   const [board, setBoard] = useState("zumjunior");
+
+  const onCodeChange = (code: string) => {
+    const newFile = update(selectedFile, { content: { $set: code } });
+
+    content.current = update(content.current!, {
+      files: { $set: updateFile(content.current!.files, newFile) }
+    });
+    onContentChange(content.current);
+  };
 
   const setLibrariesWithFiles = async (libs: ILibrary[]) => {
     setLibraries(
@@ -211,15 +220,6 @@ const Code: RefForwardingComponent<ICodeRef, ICodeProps> = (
     if (contentFile) {
       setSelectedFile(contentFile);
     }
-  };
-
-  const onCodeChange = (code: string) => {
-    const newFile = update(selectedFile, { content: { $set: code } });
-
-    content.current = update(content.current!, {
-      files: { $set: updateFile(content.current!.files, newFile) }
-    });
-    onContentChange(content.current);
   };
 
   const onUpload = async () => {

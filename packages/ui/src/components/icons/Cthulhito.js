@@ -4,7 +4,7 @@ const SvgPulpo2 = props => (
   <svg
     id="pulpo2_svg__Capa_1"
     data-name="Capa 1"
-    viewBox="0 0 256.762 159.429"
+    viewBox="60 60 136.762 29.429"
     {...props}
   >
     <defs>

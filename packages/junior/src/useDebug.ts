@@ -194,7 +194,7 @@ const useDebug = (
     avrgirl.protocol.chip.verifyPage = (_a, _b, _c, _d, cb) => cb();
     avrgirl.protocol.chip.verify = (_a, _b, _c, _d, cb) => cb();
 
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       (avrgirl as Avrgirl).flash(enc.encode(debugFirmware), error =>
         error ? reject(error) : resolve()
       );

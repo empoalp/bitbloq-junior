@@ -31,7 +31,7 @@ module.exports = withTM(
 
       config.module.rules.push(
         {
-          test: /\.(svg|mp3|png|zip)$/,
+          test: /\.(svg|mp3|png|zip|ttf)$/,
           loader: "file-loader",
           options: {
             publicPath: `/_next/static/images/`,

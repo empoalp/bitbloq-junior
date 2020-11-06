@@ -52,6 +52,7 @@
     "isomorphic-fetch": "^2.2.1",
     "js-yaml-loader": "^1.2.2",
     "lodash": "^4.17.15",
+    "monaco-editor-webpack-plugin": "^2.0.0",
     "next": "9.4",
     "next-transpile-modules": "3.3.0",
     "prop-types": "^15.6.2",
@@ -69,7 +70,8 @@
     "subscriptions-transport-ws": "^0.9.15",
     "typescript": "^3.2.2",
     "uuid": "^3.3.3",
-    "worker-loader": "^2.0.0"
+    "worker-loader": "^2.0.0",
+    "yaml": "^1.10.0"
   },
   "keywords": [
     "bitbloq"
@@ -84,6 +86,7 @@
     "@types/file-saver": "^2.0.1",
     "@types/lodash": "^4.14.138",
     "@types/react": "^16.9.16",
+    "@types/yaml": "^1.9.7",
     "babel-plugin-emotion": "^10.0.23"
   },
   "repository": {
