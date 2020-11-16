@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import update from "immutability-helper";
 import { JuniorSwitch } from "@bitbloq/ui";
 import BalloonPanel from "../BalloonPanel";

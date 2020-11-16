@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import Markdown from "react-markdown";
 import { Icon, Tooltip, useTranslate } from "@bitbloq/ui";
 import config from "../config";

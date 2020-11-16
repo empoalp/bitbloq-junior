@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect, useRef, useCallback } from "react";
 import update from "immutability-helper";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import {
   IObjectsCommonJSON,
   IPrimitiveObjectJSON,

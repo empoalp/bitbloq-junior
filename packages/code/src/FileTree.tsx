@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { colors, useTranslate, DropDown, Icon } from "@bitbloq/ui";
 import { IError, IFile, IFolder, IFileItem, ILibrary } from "./index";
 

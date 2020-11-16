@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import { css, keyframes } from "@emotion/core";
+import { css, keyframes } from "@emotion/react";
 import { Icon, colors } from "@bitbloq/ui";
 
 export interface IUploadSpinnerProps {

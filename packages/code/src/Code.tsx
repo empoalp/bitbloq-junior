@@ -9,7 +9,7 @@ import React, {
 import { v1 as uuid } from "uuid";
 import update from "immutability-helper";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { useTranslate, Button, Icon, Select } from "@bitbloq/ui";
 import Editor from "@bitbloq/ui/src/components/CodeEditor";
 import FileTree from "./FileTree";

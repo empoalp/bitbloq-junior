@@ -2,7 +2,7 @@ import { ApolloError } from "apollo-client";
 import { NextPage } from "next";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useMutation } from "react-apollo";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { IUser } from "@bitbloq/api";
 import {

@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import React, { FC } from "react";
 import { useDrag, useDrop } from "react-dnd";
 import styled from "@emotion/styled";

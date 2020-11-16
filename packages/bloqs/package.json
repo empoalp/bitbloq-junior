@@ -59,8 +59,8 @@
   },
   "dependencies": {
     "@bitbloq/ui": "^0.1.3",
-    "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "11",
     "chroma-js": "^2.0.6",
     "clone-deep": "^4.0.1",
     "deepmerge": "^3.2.0",
@@ -68,8 +68,8 @@
     "immutability-helper": "^3.0.0",
     "lodash": "^4.17.11",
     "nunjucks": "^3.2.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "17",
+    "react-dom": "17",
     "react-spring": "^8.0.19",
     "uuid": "^3.3.2"
   },

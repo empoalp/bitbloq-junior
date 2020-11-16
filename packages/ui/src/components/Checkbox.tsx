@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import Icon from "./Icon";
 
 const Container = styled.div<{ checked: boolean; error?: boolean }>`

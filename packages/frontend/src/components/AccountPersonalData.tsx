@@ -9,7 +9,7 @@ import {
   FileSelectButton,
   DialogModal
 } from "@bitbloq/ui";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import ErrorMessage from "./ErrorMessage";
 import { resourceTypes } from "../config";

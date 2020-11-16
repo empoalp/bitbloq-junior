@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import { useMutation, useLazyQuery } from "@apollo/react-hooks";
 import { IDocument, IFolder, IResult as IDocsAndFols } from "@bitbloq/api";
 import { DialogModal, DropDown, useTranslate } from "@bitbloq/ui";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { useDrop } from "react-dnd";
 import {

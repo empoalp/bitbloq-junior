@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import { colors, Icon } from "@bitbloq/ui";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { useMenuState, Menu, MenuItem, MenuButton } from "reakit/Menu";
 
 export interface IOption {

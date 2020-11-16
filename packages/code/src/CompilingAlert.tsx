@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
-import { keyframes } from "@emotion/core";
+import { keyframes } from "@emotion/react";
 import { colors, Icon, useTranslate } from "@bitbloq/ui";
 
 interface ICompilingAlertProps {

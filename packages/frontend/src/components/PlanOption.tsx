@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { FC } from "react";
 import { colors, Icon, Option, Tooltip, useTranslate } from "@bitbloq/ui";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { IPlan } from "../types";
 

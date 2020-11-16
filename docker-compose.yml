@@ -24,6 +24,17 @@ services:
 
     command: bash -c "cd packages/frontend && yarn dev"
 
+  admin:
+    image: node:14.2.0
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+    working_dir: /usr/src/app
+    command: bash -c "cd packages/admin && yarn dev"
+    ports:
+      - 8005:3000
+
   api:
     build:
       context: ./packages/api

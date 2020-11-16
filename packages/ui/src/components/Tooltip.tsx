@@ -1,7 +1,7 @@
 import * as React from "react";
 import TetherComponent from "react-tether";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 
 const Container = styled.div<{ position: string }>`
   background-color: #373b44;

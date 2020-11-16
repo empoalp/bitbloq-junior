@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { Global, css } from "@emotion/core";
+import { Global, css } from "@emotion/react";
 import { baseStyles } from "@bitbloq/ui";
 import favicon from "../images/favicon.png";
 import { getBrowserEnv } from "../lib/env";
@@ -45,8 +45,6 @@ export default class BitbloqDocument extends Document {
           )}
         </Head>
         <body>
-          <Main />
-          <NextScript />
           <script
             dangerouslySetInnerHTML={{
               __html: `window.__BITBLOQ_ENV__ = ${JSON.stringify(
@@ -54,6 +52,8 @@ export default class BitbloqDocument extends Document {
               )};`
             }}
           />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );

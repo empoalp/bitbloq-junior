@@ -1,6 +1,6 @@
 import React, { FC, useRef, useState, useEffect, useCallback } from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { Droppable } from "react-beautiful-dnd";
 import { Operation as Lib3DOperation } from "@bitbloq/lib3d";
 import Operation from "./Operation";

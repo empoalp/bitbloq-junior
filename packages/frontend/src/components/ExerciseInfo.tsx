@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import { IExercise } from "@bitbloq/api";
 import { Button, colors, useTranslate } from "@bitbloq/ui";
 

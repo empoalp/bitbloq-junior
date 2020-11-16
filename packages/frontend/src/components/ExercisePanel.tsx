@@ -3,7 +3,7 @@ import { useMutation, Mutation } from "react-apollo";
 import dayjs from "dayjs";
 import { Spring } from "react-spring/renderprops.cjs";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import {
   colors,
   Button,

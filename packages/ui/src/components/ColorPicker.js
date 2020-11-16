@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import chroma from "chroma-js";
 import { SwatchesPicker } from "react-color";
 import DropDown from "./DropDown";

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { FC, useState } from "react";
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { breakpoints, DropDown, Icon, useTranslate } from "@bitbloq/ui";
 import CloudModal from "./CloudModal";

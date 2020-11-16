@@ -7,14 +7,14 @@
   "dependencies": {
     "@bitbloq/borndate": "0.0.20",
     "@bitbloq/ui": "^0.1.3",
-    "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.23",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
     "@types/jszip": "^3.1.7",
     "avrgirl-arduino": "git+https://github.com/Bitbloq/avrgirl-arduino.git#feature/fix-browser-serial",
     "immutability-helper": "^3.0.1",
     "jszip": "^3.2.2",
     "monaco-editor": "^0.18.1",
-    "react": "^16.12.0",
+    "react": "17",
     "uuid": "^7.0.1"
   },
   "devDependencies": {}
